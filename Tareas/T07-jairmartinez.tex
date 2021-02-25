@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage[spanish]{babel}
+\usepackage{fontspec}
+\setromanfont{Times New Roman}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage[letterpaper, headheight=15pt, top=2.5cm, bottom=2.5cm, left=1.5cm, right=1.5cm]{geometry}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{2021} % Parte derecha del encabezado
+\lhead{FCFM} % Parte izquierda del encabezado
+\cfoot{\thepage} % Pie de página / Número de página
+
+\usepackage{titlesec} % Allows customization of titles
+\titleformat{\section}{\fontsize{14pt}{10pt}\bfseries}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}{\fontsize{12pt}{10pt}\bfseries}{\thesubsection.}{1em}{}
+
+%----------------------------------------------------------------------------------------
+%	TÍTULO
+%----------------------------------------------------------------------------------------
+\title{\vspace{-10mm}\fontsize{16pt}{10pt}\textbf{Tarea 7: Viendo e interpretando la solución}} % Nombre del artículo
+\author{
+	\normalsize Jair Emmanuel Martinez Lopez\\ % Tu nombre
+	\textit{\normalsize Facultad de Ciencias Físico Matemáticas - Universidad Autónoma de Coahuila}\\ % Tu institución
+	\textit{\normalsize jair\_{}martinez@uadec.edu.mx} % Tu correo electrónico
+}
+\date{\normalsize Enero, 2021} % Fecha
+%----------------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+%----------------------------------------------------------------------------------------
+%    RESUMEN
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%    MAIN
+%----------------------------------------------------------------------------------------
+%\begin{multicols}{2} % Two-column layout throughout the main article text
+\section*{Resumen}
+Sabemos que la solución general puede ser escrita como
+$$
+\dfrac{dy}{dx}=x+y \quad :\quad y=Ce^{x}-x-1.
+$$
+también 
+$$
+\dfrac{dy}{dx}=\sin{x-y}\quad :\quad y=Ce^{-x}+\frac{1}{2}(\sin{x}-\cos{x}).
+$$
+En cada caso, C es una constante arbitraria. Hay que hacer una sustitución separada de las expresiones de la "solución" tanto a la izquierda como a la derecha.\\
+Por parte de la solución $y=Ce^{x}-x-1$ encontramos
+$$
+Left: \quad \dfrac{dy}{dx}=Ce^{x}-1.
+$$
+$$
+Right: \quad x+y=x+(Ce^{x}-x-1)=Ce^{x}-1.
+$$
+La solución es correcta para cualquier valor de C y se satisface la ecuación $y'=x+y$.\\
+Para $y = Ce^{-x}+\frac{1}{2}(\sin{x}-\cos{x})$,
+$$
+Left: \quad \dfrac{dy}{dx}=-Ce^{-x}+\frac{1}{2}(\sin{x}+\cos{x}).
+$$
+$$
+Right: \quad \sin{x-y} = \sin{x}-\left(Ce^{-x}+\frac{1}{2}(\sin{x}-\cos{x})\right)
+$$
+$$
+=-Ce^{-x}+\frac{1}{2}(\sin{x}+\cos{x}).
+$$
+De nuevo, se confirma la solución.\\
+Estas curvas deberían confirmar las conclusiones acerca de la naturaleza de las soluciones. Las soluciones deberían seguir, exactamente, el flujo del campo. Si se encuentra una solución cruzando una linea del campo de flujo, lo mas probable es que tengas un error.\\
+\\
+Con la precisión finita todo número computado tienen algunos errores de redondeo, un error de redondeo que no se evite puede magnificarse sin limites mientras siga la computación del mismo, con suficiente incremento en $x$. Este error también cambia dependiendo de cual método sea utilizado.
+%\end{multicols}
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%    BIBLIOGRAFIA
+%----------------------------------------------------------------------------------------
+\section*{Bibliográfia}
+\begin{enumerate}
+	\item Computer Modeling: From Sports To Spaceflight ...From Order To Chaos, J. M. A. Danby
+\end{enumerate}
+%----------------------------------------------------------------------------------------
+\end{document}

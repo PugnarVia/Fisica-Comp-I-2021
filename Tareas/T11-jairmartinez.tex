@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage[spanish]{babel}
+\usepackage{fontspec}
+\setromanfont{Times New Roman}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage[letterpaper, headheight=15pt, top=2.5cm, bottom=2.5cm, left=1.5cm, right=1.5cm]{geometry}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{2021} % Parte derecha del encabezado
+\lhead{FCFM} % Parte izquierda del encabezado
+\cfoot{\thepage} % Pie de página / Número de página
+
+\usepackage{titlesec} % Allows customization of titles
+\titleformat{\section}{\fontsize{14pt}{10pt}\bfseries}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}{\fontsize{12pt}{10pt}\bfseries}{\thesubsection.}{1em}{}
+
+%----------------------------------------------------------------------------------------
+%	TÍTULO
+%----------------------------------------------------------------------------------------
+\title{\vspace{-10mm}\fontsize{16pt}{10pt}\textbf{Tarea 11: Primer ejemplo físico de solución numérica}} % Nombre del artículo
+\author{
+	\normalsize Jair Emmanuel Martinez Lopez\\ % Tu nombre
+	\textit{\normalsize Facultad de Ciencias Físico Matemáticas - Universidad Autónoma de Coahuila}\\ % Tu institución
+	\textit{\normalsize jair\_{}martinez@uadec.edu.mx} % Tu correo electrónico
+}
+\date{\normalsize Febrero, 2021} % Fecha
+%----------------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+%----------------------------------------------------------------------------------------
+%    RESUMEN
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%    MAIN
+%----------------------------------------------------------------------------------------
+%\begin{multicols}{2} % Two-column layout throughout the main article text
+\section*{Decaimiento radiactivo.}
+Es útil imaginarse que tenemos una muestra grande de núcleos de  ${}^{235}U$, que usualmente sería el caso al hacer un experimento para estudiar el decaimiento radiactivo. Si $N_U(t)$ es el número de núcleos de uranio presentes en una muestra en un tiempo $t$, el comportamiento viene dado por la ecuación diferencial
+\begin{equation}
+	\label{ec.dif}
+	\dfrac{dN_U}{dt}=-\dfrac{N_U}{\tau},
+\end{equation}
+donde $\tau$ es el "tiempo" de decaimiento. Cuya solución es
+\begin{equation}
+	\label{ec.sol}
+	N_U = N_U(0)e^{-t/\tau},
+\end{equation}
+donde $N_U(0)$ es el número de núcleos presentes en $t=0$. Notamos que en el tiempo $t=\tau$ una fracción $e^{-1}$ de núcleos que presentamos inicialmente no han decaído. Esto resuelve que $\tau$ es la vida media del núcleo.
+
+\section*{Aproximación numérica}
+Ahora consideremos un método simple para resolver \ref{ec.dif} numéricamente. Nuestra meta es obtener $N_U$ para un valor particular de $t$ (casi siempre en $t=0$), queremos estimar su valor en diferentes tiempos. Esto es llamado un problema de valor inicial, aquí se utilizara una solución en particular basado en la expansión de Taylor, el método de Euler [1].
+\begin{equation}
+	\label{ec.eu}
+	N_U(t+\Delta t) \approx N_U(t)-\frac{N_U(t)}{\tau}\Delta t.
+\end{equation}
+%\end{multicols}
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%    BIBLIOGRAFIA
+%----------------------------------------------------------------------------------------
+\section*{Bibliográfia}
+\begin{enumerate}
+	\item Computational physics 2nd ed., N. J. Giordano, Cap. 1
+\end{enumerate}
+%----------------------------------------------------------------------------------------
+\end{document}

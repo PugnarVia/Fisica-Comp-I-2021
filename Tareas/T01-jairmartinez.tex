@@ -1,0 +1,90 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{multirow}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{caption}
+%\usepackage{subcaption}
+\usepackage{fourier}
+\usepackage[left=1.5cm,right=1.5cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[L]{\vspace{5mm}\small FCFM  2021} % Custom header text
+\fancyhead[R]{\vspace{5mm}\small UAdeC}
+\fancyfoot[C]{\vspace{-7mm}\thepage} % Custom footer text
+
+\setlength{\parindent}{0pt}
+
+\usepackage{titlesec} % Allows customization of titles
+\titleformat{\section}{\fontsize{14pt}{10pt}\bfseries}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}{\fontsize{12pt}{10pt}\bfseries}{\thesubsection.}{1em}{}
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\fontsize{14pt}{10pt}\bfseries} % Set the "Abstract" text to bold
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-10mm}\fontsize{14pt}{10pt}\textbf{Tarea 1: La física computacional}} % Article title
+
+\author{
+\normalsize Jair Emmanuel Martinez Lopez\\ % Your name
+\textit{\normalsize Facultad de Ciencias Físico Matemáticas - Universidad Autónoma de Coahuila}\\ % Your institution
+\textit{\normalsize Enero 2021}\\
+\textit{\normalsize jair\_ martinez@uadec.edu.mx} % Your email address
+\vspace{-5mm}
+}
+\date{}
+
+%----------------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+%----------------------------------------------------------------------------------------
+%    RESUMEN
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%    MAIN
+%----------------------------------------------------------------------------------------
+%\begin{multicols}{2} % Two-column layout throughout the main article text
+Tradicionalmente la física se divide en dos: la física teórica y la física experimental. En los últimos años esta tradición ha recibido un reto, en la forma de la llamada física computacional. En este trabajo se discuten tres temas: Primero, se describen someramente los usos ya establecidos de la computadora en física, para ver hasta donde se justifica hablar de una nueva subdivisión de la física, la computacional [1].\\
+\\
+Actualmente existen lenguajes de programación cuyas características los hacen idóneos como apoyo didáctico en el aprendizaje de muchos tópicos de la física. Hay problemas típicos en la enseñanza que no pueden ser completamente explicados y entendidos en el pizarrón, porque presentan comportamientos complejos, tales como no linealidades o muchos grados de libertad, razón por la cual, no tienen solución analítica. En este caso la física computacional es un método de enseñanza que, en la práctica, incluye el contenido de los cursos tradicionales de programación y métodos numéricos [2].\\
+\\
+Las computadoras que se emplean en la física van desde microprocesadores sin ningún periférico, con un costo de unos cuantos dólares, hasta las máquinas más grandes del mundo. Correspondientemente, sus aplicaciones cubren una gama muy extensa; pero en una primera aproximación, y enfatizando ligeramente lo que es factible en México, podemos clasificarlas más o menos como sigue [1]:
+\begin{itemize}
+	\item Recolección de datos, conectando el equipo experimental directamente a
+una computadora. Este es un uso relativamente reciente, pero que se ha desarrollado rápidamente, a medida que la electrónica ha ido bajando de costo.
+	\item Muchas veces se combina la recolección de datos experimentales con el
+control del dispositivo experimental.
+	\item La computadora no sólo recaba los datos del experimento, casi siempre
+también los somete a un tratamiento (parcial o exhaustivo) antes de entregarlos al experimentador.
+	\item Al lado de los usos experimentales de las computadoras hay desde luego
+gran variedad de aplicaciones en la teoría.
+	\item Otra forma de hacer teoría mediante la computadora la constituye la simulación.
+	\item La última aplicación teórica de las computadoras es una que puede sorprender a los que piensan en estas máquinas como simples procesadores de masas de numeritos: pero en realidad la computadora efectúa transformaciones de configuraciones de "bits" según reglas -arbitrarias desde el punto de vista de la máquina- que el usuario establece, y es el usuario quien interpreta tal grupo de "bits" coro 37 y tal otro como -1.0993. Nada impide, por 10 menos en principio, que en vez de las reglas de la aritmética introduzcamos las del álgebra.
+\end{itemize}
+%\end{multicols}
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%    BIBLIOGRAFIA
+%----------------------------------------------------------------------------------------
+\section*{Bibliográfia}
+\begin{enumerate}
+	\item La física computacional, T. A. Brody, Rev. mex. fís. vol. 30 no.3 1984.
+	\item Física computacional: una propuesta educativa, J.F. Rojas, M.A. Morales, A. Rangel, y I. Torres, Rev. mex. fís. E vol.55 no.1 México jun. 2009.
+\end{enumerate}
+%----------------------------------------------------------------------------------------
+\end{document}

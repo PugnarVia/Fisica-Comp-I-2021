@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage[spanish]{babel}
+\usepackage{fontspec}
+\setromanfont{Times New Roman}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage[letterpaper, headheight=15pt, top=2.5cm, bottom=2.5cm, left=1.5cm, right=1.5cm]{geometry}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{2021} % Parte derecha del encabezado
+\lhead{FCFM} % Parte izquierda del encabezado
+\cfoot{\thepage} % Pie de página / Número de página
+
+\usepackage{titlesec} % Allows customization of titles
+\titleformat{\section}{\fontsize{14pt}{10pt}\bfseries}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}{\fontsize{12pt}{10pt}\bfseries}{\thesubsection.}{1em}{}
+
+%----------------------------------------------------------------------------------------
+%	TÍTULO
+%----------------------------------------------------------------------------------------
+\title{\vspace{-10mm}\fontsize{16pt}{10pt}\textbf{Tarea 10: Diferencias Finitas}} % Nombre del artículo
+\author{
+	\normalsize Jair Emmanuel Martinez Lopez\\ % Tu nombre
+	\textit{\normalsize Facultad de Ciencias Físico Matemáticas - Universidad Autónoma de Coahuila}\\ % Tu institución
+	\textit{\normalsize jair\_{}martinez@uadec.edu.mx} % Tu correo electrónico
+}
+\date{\normalsize Febrero, 2021} % Fecha
+%----------------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+%----------------------------------------------------------------------------------------
+%    RESUMEN
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%    MAIN
+%----------------------------------------------------------------------------------------
+%\begin{multicols}{2} % Two-column layout throughout the main article text
+La generalidad del método DF es especialmente importante en modelos que se extienden más allá de los coeficientes constantes, ya que puede manejar procesos con coeficientes variables en el tiempo, modelos de tasa de interés simples o multifactoriales. Además ofrece una considerable flexibilidad en las opciones de mallas en las dimensiones de tiempo y espacio, lo que resulta útil al tratar con dividendos discretos, barreras y otros escenarios comunes, mientras que a través de aproximaciones de mayor orden es posible mejorar la convergencia.\\
+\\
+El método de diferencias finitas permite discretizar ecuaciones diferenciales y permitir un tratamiento más simple del problema diferencial parcial, el principio del método comprende la definición de las derivadas parciales de la función f(x), como se presenta en la ecuación 1.
+\begin{equation}
+	\dfrac{\partial{}F}{\partial{}x} \approx \frac{F(x+\Delta{}x,y)-F(x,y)}{\Delta{}x}
+\end{equation}
+De la misma forma, la segunda derivada viene dada por la ecuación 2.
+\begin{equation}
+	\dfrac{\partial{}^2F}{\partial{}x^2} \approx \frac{F(x+\Delta{}x,y)-2F(x,y)+F(x-\Delta{}x,y)}{\Delta{}x^2}
+\end{equation}
+Estas derivadas parciales pueden expresarse en el dominio discreto como diferencias, considerando que los datos están uniformemente espaciados si $x_{i+1} − x_{i} = \Delta{}x$ es constante para $i = 1, 2, 3,...$ Para el caso particular de datos uniformemente espaciados, es posible encontrar una forma más sencilla del polinomio de Newton, donde se definen las diferencias según el orden, para orden cero: $\Delta^{0} f_i = f_i$ , para orden uno: $\Delta^{1} f_i = f_{i+1} - f_i$ , para orden dos: $\Delta^{2} f_{i} = f_{i+2} - 2f_{i+1} + f_i$ , para orden tres: $\Delta^{3} f_i = f_{i+3} - 3 f_{i+2} + 3f_{i-1} - f_i$ , para orden k: $\Delta^{k} f_i = f_{i+k} - k f_{i+k-1} + k(k-1)/2! f_{i+k-2} - k(k-1)(k-2)/3! f_{i+k-3} + ...$ Estas serán reescritas en función de la longitud del intervalo para su aplicación.\\
+\\
+La solución se obtiene de aproximar estas a los valores discretos conocidos de la función. El cálculo de las diferencias finitas proporciona una herramienta poderosa para el tratamiento de las variables medidas; una vez que se hayan determinado matemáticamente los valores necesarios se puede proceder a aplicarlos a las mediciones sobre el modelo. Consideremos una función conocida $y=f(x)$, que puede expresarse partiendo de un desarrollo de Taylor alrededor del valor $x = a$, como se presenta en la ecuación 3.
+\begin{equation}
+	f(x) = f(a)+(x-a)\left(\dfrac{df}{dx}\right)_a + \frac{(x-a)^2}{2!} \left(\dfrac{d^2f}{dx^2}\right)_a + ...
+\end{equation}
+Una función tal se define sobre un intervalo continuo de valores en la escala $x,y$, para que la teoría sea aplicable a las variables medidas se debe transformar la formulación de modo que se refiera a valores discretos de $x$. Donde estos valores son equidistantes a intervalos de longitud $h$ a partir de $a$. Dados por: $x=a$, $x=a+h$, $x=a+2h$, $x=a+3h$, donde los valores de y para estos valores discretos de $x$ serán: $f(a)$, $f(a+h)$, $f(a+2h)$, $f(a+3h$) y en forma correspondiente se tiene: $\Delta{}f(a+h)=f(a+2h)-f(a+h)$. Magnitudes que estarán relacionadas con las primeras derivadas de la función en los diferentes valores de x, de manera semejante, definimos la segunda diferencia como: $\Delta{}f^2(a)=f(a+h)-f(a)$ y así sucesivamente para las terceras diferencias y de orden superior. La forma original de la ecuación de Newton-Gregory se convierte en [1]:
+\begin{equation}
+	f(x) = f(a) + \frac{1}{h}(x-a)\Delta + \frac{1}{2!}\frac{1}{h^2}(x-a)(x-a-1)\Delta^2 + \frac{1}{3!}\frac{1}{h^3}(x-a)(x-a-1)(x-a-2)\Delta^3 + ...
+\end{equation}
+%\end{multicols}
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%    BIBLIOGRAFIA
+%----------------------------------------------------------------------------------------
+\section*{Bibliográfia}
+\begin{enumerate}
+	\item \url{http://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S1405-77432019000300008}
+\end{enumerate}
+%----------------------------------------------------------------------------------------
+\end{document}

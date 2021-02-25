@@ -1,0 +1,81 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{multirow}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{caption}
+%\usepackage{subcaption}
+\usepackage{fourier}
+\usepackage[left=1.5cm,right=1.5cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[L]{\vspace{5mm}\small FCFM  2021} % Custom header text
+\fancyhead[R]{\vspace{5mm}\small UAdeC}
+\fancyfoot[C]{\vspace{-7mm}\thepage} % Custom footer text
+
+\setlength{\parindent}{0pt}
+
+\usepackage{titlesec} % Allows customization of titles
+\titleformat{\section}{\fontsize{14pt}{10pt}\bfseries}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}{\fontsize{12pt}{10pt}\bfseries}{\thesubsection.}{1em}{}
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\fontsize{14pt}{10pt}\bfseries} % Set the "Abstract" text to bold
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-10mm}\fontsize{14pt}{10pt}\textbf{Tarea 2: Herramientas matemáticas de la física computacional}} % Article title
+
+\author{
+\normalsize Jair Emmanuel Martinez Lopez\\ % Your name
+\textit{\normalsize Facultad de Ciencias Físico Matemáticas - Universidad Autónoma de Coahuila}\\ % Your institution
+\textit{\normalsize Enero 2021}\\
+\textit{\normalsize jair\_ martinez@uadec.edu.mx} % Your email address
+\vspace{-5mm}
+}
+\date{}
+
+%----------------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+%----------------------------------------------------------------------------------------
+%    RESUMEN
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%    MAIN
+%----------------------------------------------------------------------------------------
+%\begin{multicols}{2} % Two-column layout throughout the main article text
+
+La elección del lenguaje de programación es importante. Los lenguajes estructurados son los candidatos, ya que obligan a descomponer el problema en procedimientos o funciones que son sucesivamente llamados por la rutina principal. Sin embargo, hemos de considerar la posibilidad de usar los denominados lenguajes de programación orientada a objetos. En particular el lenguaje C++ o el más reciente lenguaje Java.\\
+
+La programación orientada a objetos explota nuestra tendencia natural a clasificar y a la abstracción. De este modo, un programa es una colección de clases, cada clase es una abstracción que contiene la declaración de los datos, y las funciones miembro que los manipulan.\\
+
+La herencia es la característica fundamental que distingue a un lenguaje orientado a objetos de otro convencional. El lenguaje C++ o Java permiten heredar a las clases características y conductas de una o más clases denominadas base. Las clases que heredan de las clases base se denominan derivadas, estas a su vez pueden ser clases bases para otras clases derivadas. Se establece así, una clasificación jerárquica similar a la existente en Biología con los animales y las plantas.\\
+
+El polimorfismo es una palabra que significa muchas formas. En el lenguaje habitual usamos una misma palabra cuyo significado difiere según sea el contexto. Esto también ocurre en otros ámbitos. El polimorfismo imprime un alto grado de abstracción al lenguaje, y es la técnica por nos permite pasar un objeto de una clase derivada a funciones que conocen el objeto por su clase base.
+
+%\end{multicols}
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%    BIBLIOGRAFIA
+%----------------------------------------------------------------------------------------
+\section*{Bibliográfia}
+\begin{enumerate}
+	\item Física computacional, https://es.qaz.wiki/wiki/Computational\_ physics
+\end{enumerate}
+%----------------------------------------------------------------------------------------
+\end{document}
