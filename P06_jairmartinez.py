@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 fig, (ax1, ax2) = plt.subplots(2,1,constrained_layout=True)
-fig.suptitle("Proyectil con resistencia")
+fig.suptitle("Proyectil con resistencia") #Prueba de cambio
 
 for i in range(10,90,10):
     v0 = 700
